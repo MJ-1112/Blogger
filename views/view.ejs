@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <title>Your Blogs</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <div class="box">
+        <span class="apn ti">Title:<%= title %></span>
+        <span class="apn au">Author: <%= author %></span>
+        <span class="apn co"><%= content %></span>
+    </div>
+        <!-- <form action="/edit" method="PUT">
+            <input type="submit" name="edit" class="edit" value="edit">
+        </form> 
+        <form action="/delete" method="DELETE">
+            <input type="submit" name="delete" class= "delete" value="🗑">
+        </form> -->
+
+    </div>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+    
+</body>
+</html>
