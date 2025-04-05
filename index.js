@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 
 const app = express();
-const port = process.env.PORT||3000;
+const port = 3000;
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -50,7 +50,11 @@ app.get("/about", (req,res)=>{
     res.render("about.ejs");
 });
 
+try {
+    app.listen(port, () => {
+        console.log(`Server is running at port ${port}`);
+    });
+} catch (error) {
+    console.error("Error starting the server:", error);
+}
 
-app.listen(port, (req,res) =>{
-    console.log(`Server is running at port ${port}`);
-});
